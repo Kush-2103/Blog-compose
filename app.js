@@ -105,7 +105,10 @@ app.get("/general",function(req,res){
   
 });
 
-
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+let PORT = process.env.PORT || 3000;
+if(PORT==""||PORT==null){
+  PORT=3000;
+}
+app.listen(PORT, function() {
+  console.log("Server started ");
 });
