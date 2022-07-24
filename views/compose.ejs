@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compose</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+  .navbar{
+    background: rgb(0, 0, 0);
+    padding: 1.2rem;
+    line-height: 1.4;
+    color: var(--dark);
+}
+.navbar-brand{
+    color: #fff;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Playfair);
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+input[type=text], select ,textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.com {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+footer{
+  position: relative;
+    background: var(--exDark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border: 2px solid #fff;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background: #fff;
+    color: var(--exDark);
+}
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+  <nav class = "navbar">
+    <div class = "container">
+      <div class = "navbar-brand">BLOGS</div>
+      <div class = "navbar-nav">
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT US</a>
+        <a href="/contact">CONTACT US</a>
+       <a href="/compose">COMPOSE</a>
+      </div>
+    </div>
+  </nav>
+
+<h1>Compose The Blog</h1>
+
+
+
+<div class="com">
+  <form class="" action="/compose" method="post">
+    <label>Author</label>
+    <input type="text" id="fname" name="author" placeholder="Your name.." required>
+
+    <label for="Title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Title of your blog" required>
+    <label>Content of your Blog</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea > 
+
+    <label>Subject</label>
+    <select id="subject" name="subject">
+      <option value="polity">Polity</option>
+      <option value="economy">Economy</option>
+      <option value="general">General</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+
+
+</div>
+
+<footer>
+  <div class = "social-links">
+    <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+    <a href = "#"><i class = "fab fa-twitter"></i></a>
+    <a href = "#"><i class = "fab fa-instagram"></i></a>
+    <a href = "#"><i class = "fab fa-pinterest"></i></a>
+  </div>
+  <span>Blogs</span>
+</footer>
+<!-- end of footer -->
+
+
+</body>
+</html>
