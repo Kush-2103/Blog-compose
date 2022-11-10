@@ -79,7 +79,7 @@
     "y": "^0.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "app.js"
   },
   "author": "kush aggarwal",
   "license": "ISC"
