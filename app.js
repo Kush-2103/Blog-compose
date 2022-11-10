@@ -105,10 +105,10 @@ app.get("/general",function(req,res){
   
 });
 
-let PORT = process.env.PORT || 8080;
-if(PORT==""||PORT==null){
-  PORT=8080;
-}
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});
 app.listen(PORT, function() {
   console.log("Server started ");
 });
