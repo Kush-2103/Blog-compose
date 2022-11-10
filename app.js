@@ -105,9 +105,9 @@ app.get("/general",function(req,res){
   
 });
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 8080;
 if(PORT==""||PORT==null){
-  PORT=3000;
+  PORT=8080;
 }
 app.listen(PORT, function() {
   console.log("Server started ");
