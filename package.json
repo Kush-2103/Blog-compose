@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+   "scripts": {
+    "start": "node app.js"
+  },
   "engines":{
     "node": "16.15.0"
 
@@ -78,9 +81,7 @@
     "util-deprecate": "^1.0.2",
     "y": "^0.3.2"
   },
-  "scripts": {
-    "start": "app.js"
-  },
+ 
   "author": "kush aggarwal",
   "license": "ISC"
 }
