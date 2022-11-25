@@ -69,6 +69,17 @@ const requestedPostId = req.params.postId;
   });
 
 });
+app.get("/del/:postId", function(req, res){
+
+  const requestedPostId = req.params.postId;
+  
+    Post.deleteOne({_id: requestedPostId}, function(err, post){
+      if(!err)
+      res.redirect("/");
+    });
+  
+  });
+
 
 app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
@@ -105,10 +116,7 @@ app.get("/general",function(req,res){
   
 });
 
-let PORT = process.env.PORT || 8080;
-if(PORT==""||PORT==null){
-  PORT=8080;
-}
-app.listen(PORT, function() {
-  console.log("Server started ");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
 });
